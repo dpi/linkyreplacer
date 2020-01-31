@@ -1,0 +1,5 @@
+linkyreplacer.configuration_form:
+  title: 'Linky Replacer configuration'
+  parent: system.admin_config_content
+  description: 'Configure Linky Replacer settings'
+  route_name: linkyreplacer.configuration_form

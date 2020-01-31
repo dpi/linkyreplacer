@@ -1,0 +1,8 @@
+name: Linky Replacer
+description: Converts hyperlink URL's to Linky entities, and replaces URL with Linky.
+type: module
+core: 8.x
+php: 7.3
+package: Utility
+dependencies:
+  - linky:linky

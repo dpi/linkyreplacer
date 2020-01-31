@@ -1,0 +1,13 @@
+services:
+  linkyreplacer.link_replacer:
+    class: Drupal\linkyreplacer\LinkyReplacerLinkReplacer
+    arguments: ['@logger.channel.linkyreplacer', '@linkyreplacer.linky_utility']
+  linkyreplacer.linky_utility:
+    class: Drupal\linkyreplacer\LinkyEntityUtility
+    arguments: ['@entity_type.manager', '@linkyreplacer.realm_determinator']
+  linkyreplacer.realm_determinator:
+    class: Drupal\linkyreplacer\LinkyRealmDeterminator
+    arguments: ['@config.factory']
+  logger.channel.linkyreplacer:
+    parent: logger.channel_base
+    arguments: ['linkyreplacer']

@@ -1,0 +1,7 @@
+linkyreplacer.configuration_form:
+  path: '/admin/config/content/linkyreplacer/settings'
+  defaults:
+    _form: '\Drupal\linkyreplacer\Form\LinkyReplacerConfigurationForm'
+    _title: 'Linky Replacer Configuration'
+  requirements:
+    _permission: 'administer linkyreplacer'

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Hooks for Linky Replacer.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\linkyreplacer\LinkyReplacerEntityOperations;
+
+/**
+ * Implements hook_entity_presave().
+ */
+function linkyreplacer_entity_presave(EntityInterface $entity): void {
+  /** @var \Drupal\linkyreplacer\LinkyReplacerEntityOperations $entityOperations */
+  $entityOperations = \Drupal::service('class_resolver')->getInstanceFromDefinition(LinkyReplacerEntityOperations::class);
+  $entityOperations->entityPreSave($entity);
+}

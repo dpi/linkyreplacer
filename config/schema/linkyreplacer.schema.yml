@@ -1,0 +1,7 @@
+linkyreplacer.settings:
+  type: config_object
+  label: 'Linky Replacer settings'
+  mapping:
+    internal_patterns:
+      type: text
+      label: 'URLs which contain these strings are tagged as internal sites.'
